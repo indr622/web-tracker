@@ -1,0 +1,34 @@
+Feature Web Task tracker
+
+
+Tech Stack
+- Prgramming : JS
+- library : shadcnui,tanstack query,tanstack router,axios
+- package manager : bun
+
+API Koneksi
+-localhost:8000 
+
+Direktori struktur
+- src/core
+- src/feature
+- design pattern feature arsitektur
+
+Task List
+-url :https://app.notion.com/p/Task-List-3f3b6ceaf88e809aa2edfdb14943b550?showMoveTo=true&saveParent=true
+- format : id Task, Task Name, Description , Status
+- Status : draft,progress,finish,deployed
+- generate task list untuk web tracker
+
+API Spec HTTP Rest
+- GET / task
+- POST / task
+- PUT / task/{id}
+- DELETE / task/{id}
+- GET / task/{id}
+
+Git Worfklow
+- Auto commit and push semantic stand : chore, feature,bugfix,fix
+
+
+

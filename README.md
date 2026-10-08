@@ -1,32 +1,15 @@
-# React + TypeScript + Vite
+# web-tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Web Task Tracker: React, shadcn/ui, TanStack Query + Router, axios. Package manager: bun.
 
-Currently, two official plugins are available:
+## Run
+- `bun install`
+- `bun run dev` (http://localhost:5173), API di `http://localhost:8000` (override: `VITE_API_URL`)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Struktur
+- `src/core`: axios client, query client
+- `src/feature/task`: types, api, hooks, components
+- `src/routes`: file-based routes (TanStack Router)
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Git workflow
+Semantic commit: `chore`, `feature`, `bugfix`, `fix`. Auto commit & push: `sh scripts/commit.sh feature "pesan"`.
